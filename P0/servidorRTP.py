@@ -16,13 +16,14 @@ sock.bind((IP_SERVER, PORT_SERVER))
 while True:
 	# Se pone el servidor a la escucha
     data, addr = sock.recvfrom(2048) # Tamaño del buffer de recepcion
-    # Obtenemos la cabecera RTP del mensaje 
+    # Obtenemos la cabecera RTP del mensaje
     cabecera = struct.unpack('!HHII',data[0:12])
     # Obtenemos el mensaje que ha enviado el cliente
     msg = data[12:]
     # Mostramos el mensaje
     print(">>>"+str(msg.decode()))
-    # Enviamos la cabecera RTP para dar confirmacion de que se ha recibido el mensaje
+    # Enviamos la cabecera RTP para dar confirmacion de que se ha recibido el mensaje, no
+    # se incrementa el numero de secuencia en este caso, ya que es una confirmacion
     sock.sendto(data, addr)
 
 print("Se finalizo la conexión ...")
