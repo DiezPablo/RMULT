@@ -24,21 +24,21 @@ while(1):
     MESSAGE = str.encode(entrada) # Los mensajes son arrays de bytes, no strings
 
     # Construccion cabecera RTP
-    cabecera = struct.pack("!HHII", 0x8014,SEQ, int(tenvio), SSRC_id)
+    cabecera = struct.pack("!HHII", 0x8014, SEQ, int(tenvio), SSRC_id)
     # Construcción del mensaje que enviamos al servidor
     data_envio = cabecera +MESSAGE
-    # Se envia el mensaje al destino
+    # Se envia el mensaje al destino   
     sock.sendto(data_envio, (IP, PORT))
     # Aumentamos el número de secuencia
     SEQ += 1
     # Se espera la respuesta
     data, addr = sock.recvfrom(2048)
+
     # Se calcula el RTT
     rtt = time.time()-tenvio
-    # Se comprueba la respuesta
-    if data==data_envio:
-    	print ("Tiem de respuesta:" +str(rtt)+" milisegundos")
-    else:
-    	print ("No volvio el mensaje correctamente")
+    data_rcv = struct.unpack('!HHII',data[0:12])
+    
+    print("Mensaje recibido: ", data[12:].decode())
+
 
 print("Se finaliza la conexion...")

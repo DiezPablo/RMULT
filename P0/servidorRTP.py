@@ -6,7 +6,7 @@ import struct
 # Declaracion de variables
 IP_SERVER = "127.0.0.1"
 PORT_SERVER = 5004
-
+SSRC_id = 2
 # Se crea un socket para recibir (servidor)
 sock = socket.socket(socket.AF_INET, # Internet
                         socket.SOCK_DGRAM) # UDP
@@ -21,9 +21,16 @@ while True:
     # Obtenemos el mensaje que ha enviado el cliente
     msg = data[12:]
     # Mostramos el mensaje
-    print(">>>"+str(msg.decode()))
+    print("Mensaje recibido: "+str(msg.decode()))
     # Enviamos la cabecera RTP para dar confirmacion de que se ha recibido el mensaje, no
     # se incrementa el numero de secuencia en este caso, ya que es una confirmacion
-    sock.sendto(data, addr)
+    entrada = input("Introduce el mensaje: ")
+    MESSAGE = str.encode(entrada) # Los mensajes son arrays de bytes, no strings
+    tenvio = time.time()
+    # Construccion cabecera RTP
+    cabecera = struct.pack("!HHII", 0x8014, cabecera[3], int(tenvio), SSRC_id)
+    # Construcción del mensaje que enviamos al servidor
+    data_envio = cabecera +MESSAGE
+    sock.sendto(data_envio, addr)
 
 print("Se finalizo la conexión ...")
