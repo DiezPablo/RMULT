@@ -22,7 +22,7 @@ while True:
     msg = data[12:]
     # Mostramos el mensaje
     print("Mensaje recibido: "+str(msg.decode()))
-    # Enviamos la cabecera RTP para dar confirmacion de que se ha recibido el mensaje, no
+    # Enviamos la cabecera RTP y un mensaje de vuelta para dar confirmacion de que se ha recibido el mensaje, no
     # se incrementa el numero de secuencia en este caso, ya que es una confirmacion
     entrada = input("Introduce el mensaje: ")
     MESSAGE = str.encode(entrada) # Los mensajes son arrays de bytes, no strings

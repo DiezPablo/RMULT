@@ -17,28 +17,29 @@ sock = socket.socket(socket.AF_INET, # Internet
 
 # Bucle para poder enviar todos los mensajes que queramos
 while(1):
-    # Cogemos el tiempo antes de enviar el mensaje
-    tenvio=time.time()
-    # Obtenemos por teclado el mensaje que queremos enviar
-    entrada = input("Introduce el mensaje: ")
-    MESSAGE = str.encode(entrada) # Los mensajes son arrays de bytes, no strings
+	# Cogemos el tiempo antes de enviar el mensaje
+	tenvio=time.time()
+	# Obtenemos por teclado el mensaje que queremos enviar
+	entrada = input("Introduce el mensaje: ")
+	MESSAGE = str.encode(entrada) # Los mensajes son arrays de bytes, no strings
 
-    # Construccion cabecera RTP
-    cabecera = struct.pack("!HHII", 0x8014, SEQ, int(tenvio), SSRC_id)
-    # Construcción del mensaje que enviamos al servidor
-    data_envio = cabecera +MESSAGE
-    # Se envia el mensaje al destino   
-    sock.sendto(data_envio, (IP, PORT))
-    # Aumentamos el número de secuencia
-    SEQ += 1
-    # Se espera la respuesta
-    data, addr = sock.recvfrom(2048)
+	# Construccion cabecera RTP
+	cabecera = struct.pack("!HHII", 0x8014, SEQ, int(tenvio), SSRC_id)
+	# Construcción del mensaje que enviamos al servidor
+	data_envio = cabecera +MESSAGE
+	# Se envia el mensaje al destino   
+	sock.sendto(data_envio, (IP, PORT))
+	# Aumentamos el número de secuencia
+	SEQ += 1
+	# Se espera la respuesta
+	data, addr = sock.recvfrom(2048)
 
-    # Se calcula el RTT
-    rtt = time.time()-tenvio
-    data_rcv = struct.unpack('!HHII',data[0:12])
-    
-    print("Mensaje recibido: ", data[12:].decode())
+	# Se calcula el RTT
+	rtt = time.time()-tenvio
+	data_rcv = struct.unpack('!HHII',data[0:12])
+
+	print("Mensaje recibido: ", data[12:].decode())
+	print("RTT: ", rtt)
 
 
 print("Se finaliza la conexion...")
