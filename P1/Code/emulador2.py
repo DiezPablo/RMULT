@@ -34,8 +34,6 @@ def main():
 		sock_receive = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 		sock_client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-
-
 		# Enlazamos el socket para escuchar los paquetes
 		sock_receive.bind((IP_recieve,PORT_recieve))
 
