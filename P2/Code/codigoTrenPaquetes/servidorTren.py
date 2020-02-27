@@ -65,7 +65,7 @@ if __name__ == "__main__":
 		lenData = len(data[12:])
 		#ATENCIÓN: El tiempo de recepción está en formato: segundos.microsegundos
 		#Usar este tiempo para calcular los anchos de banda
-		reception_time=packet[1]
+		reception_time=packet[1] #Para calcula el ancho de banda
 		tamanoPackets = len(data[12:])
 		npackets+=1
 		#Truncamos el tiempo de recepción a centésimas de milisegundos 
