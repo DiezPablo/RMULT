@@ -30,7 +30,7 @@ if __name__ == "__main__":
 	dataLength=int(sys.argv[4])
 
 
-	if dataLength+IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE>MAX_ETHERNET_DATA or dataLength+IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE<MIN_ETHERNET_DATA :
+	if dstIP != "127.0.0.1" and (dataLength+IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE>MAX_ETHERNET_DATA or dataLength+IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE<MIN_ETHERNET_DATA):
 		# Se controla si la trama sería inferior al tamaño minimo, o bien tan grande que habría que fragmentarla, estropeando la medida
 		#PRACTICA : Añadir los controles de tamaño necesarios para el caso de localhost
 		print('Tamaño de datos incorrecto')
