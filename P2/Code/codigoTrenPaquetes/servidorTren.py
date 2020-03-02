@@ -8,6 +8,7 @@ import sys
 import socket
 import struct
 import time
+import math
 
 MAX_ETHERNET_DATA=1500
 MIN_ETHERNET_DATA=46
@@ -79,9 +80,9 @@ if __name__ == "__main__":
 		if npackets > 1:
 			reception_time_i1 = packet_list[npackets-2][1]
 			if (reception_time_i1 - reception_time) == 0:
-				anchoBandaInstantaneo = len(data[12:])
+				anchoBandaInstantaneo = tamanoPackets
 			else:
-				anchoBandaInstantaneo = len(data[12:]) / (reception_time - reception_time_i1)
+				anchoBandaInstantaneo = tamanoPackets / (reception_time - reception_time_i1)
 			anchosBandas.append(anchoBandaInstantaneo)
 			print ('Ancho de Banda Instantáneo (b/s): ', anchoBandaInstantaneo)
 		###########################PRÁCTICA##############################################
@@ -113,9 +114,16 @@ if __name__ == "__main__":
 	sumaRetardo = 0
 	for ret in retardos:
 		sumaRetardo += ret
+	retardo_medio = sumaRetardo / len(retardos)
 	print ('Retardo Máximo en (s): ', max(retardos))
 	print ('Retardo Mínimo en (s): ', min(retardos))
-	print ('Retardo Medio en (s): ', (sumaRetardo/len(retardos)))
+	print ('Retardo Medio en (s): ', retardo_medio)
+	sumatorio =  0
+	res = 0
+	for retardo in retardos:
+		res = (retardo - retardo_medio)**2
+		sumatorio += res
+	jitter = math.sqrt(sumatorio/len(retardos))
 	print ('Variación del retardo: ',jitter)
 	#################################################################################
 
