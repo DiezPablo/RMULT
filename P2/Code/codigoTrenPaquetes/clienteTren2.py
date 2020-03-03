@@ -29,7 +29,8 @@ if __name__ == "__main__":
 	trainLength=int(sys.argv[3])
 	dataLength=int(sys.argv[4])
 	tasa_envio = float(sys.argv[5])
-
+	dataIpLocal = 0
+	dataIpEth = 0
 
 	if (dstIP != "127.0.0.1" and (dataLength+IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE>MAX_ETHERNET_DATA or dataLength+IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE<MIN_ETHERNET_DATA)) or (dstIP == "127.0.0.1" and (dataLength+IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE>MAX_ETHERNET_DATA)):
 		# Se controla si la trama sería inferior al tamaño minimo, o bien tan grande que habría que fragmentarla, estropeando la medida
@@ -39,19 +40,21 @@ if __name__ == "__main__":
 	sock_send= socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # UDP
 	#generar un array de datos de longitud dataLength con el caracter 0
 	if dstIP == "127.0.0.1":
-		dataLength += IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE
+		 dataIpLocal = IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE+dataLength
 	else:
-		dataLength += IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE+ETH_HDR_SIZE
+		dataIpEth = IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE+ETH_HDR_SIZE + dataLength
 	data=('0'*(dataLength)).encode()
 	seq_number=0
-	time_wait = dataLength / tasa_envio
 
+	if dstIP == "127.0.0.1":
+		time_wait = (dataIpLocal*8) / tasa_envio
+	else:
+		time_wait = (dataIpEth*8) / tasa_envio
 	for i in range(0,trainLength):
 		#usamos la longitud del tren como identificador de fuente. De esta manera en destino podemos saber la
-		#longitud original del tren. En el campo timestamp (32bits) sólo podemos enviar segundos y 
+		#longitud original del tren. En el campo timestamp (32bits) sólo podemos enviar segundos y
 		#centésimas de milisegundos (o decenas de microsegundos, segun se quiera ver) truncados a 32bits
 		message=struct.pack('!HHII',0x8014,seq_number, int(time.time()*DECENASMICROSECS)&B_MASK,trainLength)+data
 		sock_send.sendto(message,addr)
 		time.sleep(time_wait)
 		seq_number+=1
-
