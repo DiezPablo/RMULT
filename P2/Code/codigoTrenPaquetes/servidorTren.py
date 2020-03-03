@@ -112,7 +112,7 @@ if __name__ == "__main__":
 	# Añadir cálculos necesarios para obtener pérdida de paquetes y variación del   #
 	# retardo                                                                       #
 	#################################################################################
-	packetLoss= len(packet_list) - npackets
+	packetLoss= trainLength - npackets
 	print ('Número de paquetes recibidos: ', npackets)
 	print ('Perdida de paquetes: ',packetLoss)
 	print ('Porcentaje de Perdida de paquetes: ', (packetLoss*100)/npackets)
