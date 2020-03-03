@@ -68,7 +68,7 @@ if __name__ == "__main__":
 		#Usar este tiempo para calcular los anchos de banda
 		reception_time=packet[1] #Para calcula el ancho de banda
 		tamanoPackets = len(data[12:])
-		if dstIP == "127.0.0.1":
+		if ipListen == "127.0.0.1":
 			tamanoPackets += IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE
 		else:
 			tamanoPackets += IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE+ETH_HDR_SIZE
