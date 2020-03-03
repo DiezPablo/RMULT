@@ -37,19 +37,14 @@ if __name__ == "__main__":
 		exit(0)
 	sock_send= socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # UDP
 	#generar un array de datos de longitud dataLength con el caracter 0
-	if dstIP == "127.0.0.1":
-		dataLength += IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE
-	else:
-		dataLength += IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE+ETH_HDR_SIZE
 	data=('0'*(dataLength)).encode()
 	seq_number=0
 
 
 	for i in range(0,trainLength):
 		#usamos la longitud del tren como identificador de fuente. De esta manera en destino podemos saber la
-		#longitud original del tren. En el campo timestamp (32bits) sólo podemos enviar segundos y 
+		#longitud original del tren. En el campo timestamp (32bits) sólo podemos enviar segundos y
 		#centésimas de milisegundos (o decenas de microsegundos, segun se quiera ver) truncados a 32bits
 		message=struct.pack('!HHII',0x8014,seq_number, int(time.time()*DECENASMICROSECS)&B_MASK,trainLength)+data
 		sock_send.sendto(message,addr)
 		seq_number+=1
-

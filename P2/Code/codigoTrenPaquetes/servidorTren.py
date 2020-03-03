@@ -37,13 +37,13 @@ if __name__ == "__main__":
 	sock_listen.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 	sock_listen.bind((ipListen,portListen))
 	sock_listen.settimeout(MAX_WAIT_TIME)
-	
+
 	#Recibimos los paquetes y salimos del bucle cuando no se reciban paquetes en MAX_WAIT_TIME segundos
 	while True:
 		try:
 			data, addr = sock_listen.recvfrom(2048)
 			#Para cada paquete recibido añadimos a la lista de paquetes
-			#una tupla que contiene los datos del paquete y el tiempo en que 
+			#una tupla que contiene los datos del paquete y el tiempo en que
 			#se recibió dicho paquete
 			packet_list.append((data,time.time()))
 
@@ -67,9 +67,14 @@ if __name__ == "__main__":
 		#ATENCIÓN: El tiempo de recepción está en formato: segundos.microsegundos
 		#Usar este tiempo para calcular los anchos de banda
 		reception_time=packet[1] #Para calcula el ancho de banda
-		tamanoPackets = len(data[12:])*8
+		tamanoPackets = len(data[12:])
+		if dstIP == "127.0.0.1":
+			tamanoPackets += IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE
+		else:
+			tamanoPackets += IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE+ETH_HDR_SIZE
+		tamanoPackets = tamanoPackets * 8
 		npackets+=1
-		#Truncamos el tiempo de recepción a centésimas de milisegundos 
+		#Truncamos el tiempo de recepción a centésimas de milisegundos
 		#(o decenas de microsegundos, segun se quiera ver) y 32 bits
 		#para poder calcular el OWD en la misma base en que está el tiempo
 		#de envío del paquete
@@ -89,7 +94,7 @@ if __name__ == "__main__":
 		#                                                                               #
 		# Añadir cálculos necesarios para obtener ancho de banda (instantáneo,medio,    #
 		# máximo,mínimo) retaro en un sentido (instantáneo, medio, máximo y mínimo)     #
-		# ATENCIÓN: los tiempos truncados están en centésimas de milisegundos           # 
+		# ATENCIÓN: los tiempos truncados están en centésimas de milisegundos           #
 		#         (o decenas de microsegundos, segun se quiera ver)                     #
 		# a la hora de calcular retardos se debe tener en cuenta                        #
 		#################################################################################
@@ -127,7 +132,3 @@ if __name__ == "__main__":
 	jitter = math.sqrt(sumatorio/len(retardos))
 	print ('Variación del retardo: ',jitter)
 	#################################################################################
-
-
-
-
