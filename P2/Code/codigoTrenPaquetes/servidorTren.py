@@ -100,11 +100,13 @@ if __name__ == "__main__":
 		#################################################################################
 	reception_time_1 = packet_list[0][1]
 	reception_time_N = packet_list[-1][1]
+	# Calculamos el ancho de banda instaneo en diferentes medidas
 	anchoBandaMedio = ((npackets - 1) * tamanoPackets)/ (reception_time_N - reception_time_1)
 	print ('Ancho de Bando Medio (b/s): ', anchoBandaMedio)
 	print ('Ancho de Banda Medio (Kb/s): ', (anchoBandaMedio/1000))
 	print ('Ancho de Banda Medio (Mb/s): ', (anchoBandaMedio/1000000))
 	print ('Ancho de Banda Medio (Gb/s): ', (anchoBandaMedio/1000000000))
+	# Calculamos el ancho de banda máximo y mínimo
 	print ('Ancho de Banda Instantáneo Máximo (b/s): ', max(anchosBandas))
 	print ('Ancho de Banda Instantáneo Mínimo (b/s): ', min(anchosBandas))
 	###########################PRÁCTICA##############################################

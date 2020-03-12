@@ -39,13 +39,14 @@ if __name__ == "__main__":
 		exit(0)
 	sock_send= socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # UDP
 	#generar un array de datos de longitud dataLength con el caracter 0
+	# Añadimos las cabeceras correspondiente para determinar el tamaño del paquete
 	if dstIP == "127.0.0.1":
 		 dataIpLocal = IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE+dataLength
 	else:
 		dataIpEth = IP_HDR_SIZE+UDP_HDR_SIZE+RTP_HDR_SIZE+ETH_HDR_SIZE + dataLength
 	data=('0'*(dataLength)).encode()
 	seq_number=0
-
+	# Calculamos el tiempo que tenemos que esperar entre paquetes
 	if dstIP == "127.0.0.1":
 		time_wait = (dataIpLocal*8) / tasa_envio
 	else:
