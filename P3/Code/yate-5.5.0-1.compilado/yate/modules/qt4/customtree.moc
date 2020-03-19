@@ -1,0 +1,712 @@
+/****************************************************************************
+** Meta object code from reading C++ file 'customtree.h'
+**
+** Created by: The Qt Meta Object Compiler version 63 (Qt 4.8.6)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#include "customtree.h"
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#error "The header file 'customtree.h' doesn't include <QObject>."
+#elif Q_MOC_OUTPUT_REVISION != 63
+#error "This file was generated using the moc from 4.8.6. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+QT_BEGIN_MOC_NAMESPACE
+static const uint qt_meta_data_QtTreeDrag[] = {
+
+ // content:
+       6,       // revision
+       0,       // classname
+       1,   14, // classinfo
+       0,    0, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // classinfo: key, value
+       0,   11,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_QtTreeDrag[] = {
+    "QtTreeDrag\0Yate\0"
+};
+
+void QtTreeDrag::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
+}
+
+const QMetaObjectExtraData QtTreeDrag::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
+const QMetaObject QtTreeDrag::staticMetaObject = {
+    { &QObject::staticMetaObject, qt_meta_stringdata_QtTreeDrag,
+      qt_meta_data_QtTreeDrag, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &QtTreeDrag::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *QtTreeDrag::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *QtTreeDrag::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_QtTreeDrag))
+        return static_cast<void*>(const_cast< QtTreeDrag*>(this));
+    if (!strcmp(_clname, "GenObject"))
+        return static_cast< GenObject*>(const_cast< QtTreeDrag*>(this));
+    return QObject::qt_metacast(_clname);
+}
+
+int QtTreeDrag::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QObject::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    return _id;
+}
+static const uint qt_meta_data_QtCustomTree[] = {
+
+ // content:
+       6,       // revision
+       0,       // classname
+       1,   14, // classinfo
+       8,   16, // methods
+      25,   56, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // classinfo: key, value
+       0,   13,
+
+ // slots: signature, parameters, type, tag, flags
+      19,   18,   18,   18, 0x09,
+      40,   37,   18,   18, 0x09,
+      62,   18,   18,   18, 0x09,
+      92,   80,   18,   18, 0x09,
+     141,  136,   18,   18, 0x09,
+     176,  136,   18,   18, 0x09,
+     212,   80,   18,   18, 0x09,
+     250,   18,   18,   18, 0x09,
+
+ // properties: name, type, flags
+     283,  271, 0x0b095003,
+     305,  300, 0x01095103,
+     320,  316, 0x02095103,
+     330,  300, 0x01095003,
+     353,  300, 0x01095003,
+     385,  377, 0x0a095003,
+     398,  377, 0x0a095003,
+     414,  377, 0x0a095003,
+     438,  377, 0x0a095003,
+     459,  377, 0x0a095003,
+     487,  377, 0x0a095003,
+     509,  377, 0x0a095003,
+     533,  377, 0x0a095003,
+     558,  377, 0x0a095003,
+     576,  377, 0x0a095003,
+     598,  377, 0x0a095003,
+     622,  377, 0x0a095003,
+     639,  377, 0x0a095003,
+     660,  377, 0x0a095003,
+     678,  377, 0x0a095003,
+     697,  377, 0x0a095003,
+     719,  377, 0x0a095003,
+     746,  377, 0x0a095003,
+     763,  377, 0x0a095003,
+     777,  377, 0x0a095003,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_QtCustomTree[] = {
+    "QtCustomTree\0Yate\0\0itemChildAction()\0"
+    "on\0itemChildToggle(bool)\0itemChildSelect()\0"
+    "item,column\0itemDoubleClickedSlot(QTreeWidgetItem*,int)\0"
+    "item\0itemExpandedSlot(QTreeWidgetItem*)\0"
+    "itemCollapsedSlot(QTreeWidgetItem*)\0"
+    "itemChangedSlot(QTreeWidgetItem*,int)\0"
+    "itemSelChangedSlot()\0QStringList\0"
+    "_yate_save_props\0bool\0autoExpand\0int\0"
+    "rowHeight\0_yate_horizontalheader\0"
+    "_yate_notifyitemchanged\0QString\0"
+    "_yate_itemui\0_yate_itemstyle\0"
+    "_yate_itemselectedstyle\0_yate_itemacceptdrop\0"
+    "_yate_itemacceptdroponempty\0"
+    "_yate_itemstatewidget\0_yate_itemexpandedimage\0"
+    "_yate_itemcollapsedimage\0_yate_itemtooltip\0"
+    "_yate_itemstatswidget\0_yate_itemstatstemplate\0"
+    "_yate_itemheight\0_yate_itembackground\0"
+    "_yate_itemmargins\0_yate_itemeditable\0"
+    "_yate_itempaintbutton\0_yate_itempaintbuttonparam\0"
+    "_yate_col_widths\0_yate_sorting\0"
+    "_yate_itemsexpstatus\0"
+};
+
+void QtCustomTree::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        QtCustomTree *_t = static_cast<QtCustomTree *>(_o);
+        switch (_id) {
+        case 0: _t->itemChildAction(); break;
+        case 1: _t->itemChildToggle((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 2: _t->itemChildSelect(); break;
+        case 3: _t->itemDoubleClickedSlot((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 4: _t->itemExpandedSlot((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1]))); break;
+        case 5: _t->itemCollapsedSlot((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1]))); break;
+        case 6: _t->itemChangedSlot((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 7: _t->itemSelChangedSlot(); break;
+        default: ;
+        }
+    }
+}
+
+const QMetaObjectExtraData QtCustomTree::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
+const QMetaObject QtCustomTree::staticMetaObject = {
+    { &QtTree::staticMetaObject, qt_meta_stringdata_QtCustomTree,
+      qt_meta_data_QtCustomTree, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &QtCustomTree::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *QtCustomTree::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *QtCustomTree::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_QtCustomTree))
+        return static_cast<void*>(const_cast< QtCustomTree*>(this));
+    return QtTree::qt_metacast(_clname);
+}
+
+int QtCustomTree::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QtTree::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 8)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 8;
+    }
+#ifndef QT_NO_PROPERTIES
+      else if (_c == QMetaObject::ReadProperty) {
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: *reinterpret_cast< QStringList*>(_v) = saveProps(); break;
+        case 1: *reinterpret_cast< bool*>(_v) = autoExpand(); break;
+        case 2: *reinterpret_cast< int*>(_v) = rowHeight(); break;
+        case 3: *reinterpret_cast< bool*>(_v) = getHHeader(); break;
+        case 4: *reinterpret_cast< bool*>(_v) = getNotifyItemChanged(); break;
+        case 5: *reinterpret_cast< QString*>(_v) = itemUi(); break;
+        case 6: *reinterpret_cast< QString*>(_v) = itemStyle(); break;
+        case 7: *reinterpret_cast< QString*>(_v) = itemSelectedStyle(); break;
+        case 8: *reinterpret_cast< QString*>(_v) = itemAcceptDrop(); break;
+        case 9: *reinterpret_cast< QString*>(_v) = itemAcceptDropOnEmpty(); break;
+        case 10: *reinterpret_cast< QString*>(_v) = itemStateWidget(); break;
+        case 11: *reinterpret_cast< QString*>(_v) = itemExpandedImage(); break;
+        case 12: *reinterpret_cast< QString*>(_v) = itemCollapsedImage(); break;
+        case 13: *reinterpret_cast< QString*>(_v) = itemTooltip(); break;
+        case 14: *reinterpret_cast< QString*>(_v) = itemStatsWidget(); break;
+        case 15: *reinterpret_cast< QString*>(_v) = itemStatsTemplate(); break;
+        case 16: *reinterpret_cast< QString*>(_v) = itemHeight(); break;
+        case 17: *reinterpret_cast< QString*>(_v) = itemBg(); break;
+        case 18: *reinterpret_cast< QString*>(_v) = itemMargins(); break;
+        case 19: *reinterpret_cast< QString*>(_v) = itemEditable(); break;
+        case 20: *reinterpret_cast< QString*>(_v) = itemPaintButton(); break;
+        case 21: *reinterpret_cast< QString*>(_v) = itemPaintButtonParam(); break;
+        case 22: *reinterpret_cast< QString*>(_v) = colWidths(); break;
+        case 23: *reinterpret_cast< QString*>(_v) = sorting(); break;
+        case 24: *reinterpret_cast< QString*>(_v) = itemsExpStatus(); break;
+        }
+        _id -= 25;
+    } else if (_c == QMetaObject::WriteProperty) {
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: setSaveProps(*reinterpret_cast< QStringList*>(_v)); break;
+        case 1: setAutoExpand(*reinterpret_cast< bool*>(_v)); break;
+        case 2: setRowHeight(*reinterpret_cast< int*>(_v)); break;
+        case 3: setHHeader(*reinterpret_cast< bool*>(_v)); break;
+        case 4: setNotifyItemChanged(*reinterpret_cast< bool*>(_v)); break;
+        case 5: setItemUi(*reinterpret_cast< QString*>(_v)); break;
+        case 6: setItemStyle(*reinterpret_cast< QString*>(_v)); break;
+        case 7: setItemSelectedStyle(*reinterpret_cast< QString*>(_v)); break;
+        case 8: setItemAcceptDrop(*reinterpret_cast< QString*>(_v)); break;
+        case 9: setItemAcceptDropOnEmpty(*reinterpret_cast< QString*>(_v)); break;
+        case 10: setItemStateWidget(*reinterpret_cast< QString*>(_v)); break;
+        case 11: setExpandedImage(*reinterpret_cast< QString*>(_v)); break;
+        case 12: setItemCollapsedImage(*reinterpret_cast< QString*>(_v)); break;
+        case 13: setItemTooltip(*reinterpret_cast< QString*>(_v)); break;
+        case 14: setItemStatsWidget(*reinterpret_cast< QString*>(_v)); break;
+        case 15: setItemStatsTemplate(*reinterpret_cast< QString*>(_v)); break;
+        case 16: setItemHeight(*reinterpret_cast< QString*>(_v)); break;
+        case 17: setItemBg(*reinterpret_cast< QString*>(_v)); break;
+        case 18: setItemMargins(*reinterpret_cast< QString*>(_v)); break;
+        case 19: setItemEditable(*reinterpret_cast< QString*>(_v)); break;
+        case 20: setItemPaintButton(*reinterpret_cast< QString*>(_v)); break;
+        case 21: setItemPaintButtonParam(*reinterpret_cast< QString*>(_v)); break;
+        case 22: setColWidths(*reinterpret_cast< QString*>(_v)); break;
+        case 23: setSorting(*reinterpret_cast< QString*>(_v)); break;
+        case 24: setItemsExpStatus(*reinterpret_cast< QString*>(_v)); break;
+        }
+        _id -= 25;
+    } else if (_c == QMetaObject::ResetProperty) {
+        _id -= 25;
+    } else if (_c == QMetaObject::QueryPropertyDesignable) {
+        _id -= 25;
+    } else if (_c == QMetaObject::QueryPropertyScriptable) {
+        _id -= 25;
+    } else if (_c == QMetaObject::QueryPropertyStored) {
+        _id -= 25;
+    } else if (_c == QMetaObject::QueryPropertyEditable) {
+        _id -= 25;
+    } else if (_c == QMetaObject::QueryPropertyUser) {
+        _id -= 25;
+    }
+#endif // QT_NO_PROPERTIES
+    return _id;
+}
+static const uint qt_meta_data_ContactList[] = {
+
+ // content:
+       6,       // revision
+       0,       // classname
+       1,   14, // classinfo
+       0,    0, // methods
+       5,   16, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // classinfo: key, value
+       0,   12,
+
+ // properties: name, type, flags
+      25,   17, 0x0a095003,
+      52,   47, 0x01095003,
+      67,   47, 0x01095003,
+      93,   47, 0x01095003,
+     115,   47, 0x01095003,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_ContactList[] = {
+    "ContactList\0Yate\0QString\0_yate_nogroup_caption\0"
+    "bool\0_yate_flatlist\0_yate_showofflinecontacts\0"
+    "_yate_hideemptygroups\0_yate_comparecase\0"
+};
+
+void ContactList::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
+}
+
+const QMetaObjectExtraData ContactList::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
+const QMetaObject ContactList::staticMetaObject = {
+    { &QtCustomTree::staticMetaObject, qt_meta_stringdata_ContactList,
+      qt_meta_data_ContactList, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &ContactList::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *ContactList::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *ContactList::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_ContactList))
+        return static_cast<void*>(const_cast< ContactList*>(this));
+    return QtCustomTree::qt_metacast(_clname);
+}
+
+int ContactList::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QtCustomTree::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    
+#ifndef QT_NO_PROPERTIES
+     if (_c == QMetaObject::ReadProperty) {
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: *reinterpret_cast< QString*>(_v) = noGroupCaption(); break;
+        case 1: *reinterpret_cast< bool*>(_v) = flatList(); break;
+        case 2: *reinterpret_cast< bool*>(_v) = showOffline(); break;
+        case 3: *reinterpret_cast< bool*>(_v) = hideEmptyGroups(); break;
+        case 4: *reinterpret_cast< bool*>(_v) = cmpNameCs(); break;
+        }
+        _id -= 5;
+    } else if (_c == QMetaObject::WriteProperty) {
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: setNoGroupCaption(*reinterpret_cast< QString*>(_v)); break;
+        case 1: setFlatList(*reinterpret_cast< bool*>(_v)); break;
+        case 2: setShowOffline(*reinterpret_cast< bool*>(_v)); break;
+        case 3: setHideEmptyGroups(*reinterpret_cast< bool*>(_v)); break;
+        case 4: setCmpNameCs(*reinterpret_cast< bool*>(_v)); break;
+        }
+        _id -= 5;
+    } else if (_c == QMetaObject::ResetProperty) {
+        _id -= 5;
+    } else if (_c == QMetaObject::QueryPropertyDesignable) {
+        _id -= 5;
+    } else if (_c == QMetaObject::QueryPropertyScriptable) {
+        _id -= 5;
+    } else if (_c == QMetaObject::QueryPropertyStored) {
+        _id -= 5;
+    } else if (_c == QMetaObject::QueryPropertyEditable) {
+        _id -= 5;
+    } else if (_c == QMetaObject::QueryPropertyUser) {
+        _id -= 5;
+    }
+#endif // QT_NO_PROPERTIES
+    return _id;
+}
+static const uint qt_meta_data_DirListThread[] = {
+
+ // content:
+       6,       // revision
+       0,       // classname
+       1,   14, // classinfo
+       0,    0, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // classinfo: key, value
+       0,   14,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_DirListThread[] = {
+    "DirListThread\0Yate\0"
+};
+
+void DirListThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
+}
+
+const QMetaObjectExtraData DirListThread::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
+const QMetaObject DirListThread::staticMetaObject = {
+    { &QThread::staticMetaObject, qt_meta_stringdata_DirListThread,
+      qt_meta_data_DirListThread, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &DirListThread::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *DirListThread::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *DirListThread::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_DirListThread))
+        return static_cast<void*>(const_cast< DirListThread*>(this));
+    return QThread::qt_metacast(_clname);
+}
+
+int DirListThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QThread::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    return _id;
+}
+static const uint qt_meta_data_FileListTree[] = {
+
+ // content:
+       6,       // revision
+       0,       // classname
+       1,   14, // classinfo
+       1,   16, // methods
+       2,   21, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // classinfo: key, value
+       0,   13,
+
+ // slots: signature, parameters, type, tag, flags
+      19,   18,   18,   18, 0x09,
+
+ // properties: name, type, flags
+      50,   42, 0x0a095003,
+      72,   42, 0x0a095003,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_FileListTree[] = {
+    "FileListTree\0Yate\0\0onDirThreadTerminate()\0"
+    "QString\0_yate_filesystem_path\0"
+    "_yate_refresh\0"
+};
+
+void FileListTree::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        FileListTree *_t = static_cast<FileListTree *>(_o);
+        switch (_id) {
+        case 0: _t->onDirThreadTerminate(); break;
+        default: ;
+        }
+    }
+    Q_UNUSED(_a);
+}
+
+const QMetaObjectExtraData FileListTree::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
+const QMetaObject FileListTree::staticMetaObject = {
+    { &QtCustomTree::staticMetaObject, qt_meta_stringdata_FileListTree,
+      qt_meta_data_FileListTree, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &FileListTree::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *FileListTree::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *FileListTree::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_FileListTree))
+        return static_cast<void*>(const_cast< FileListTree*>(this));
+    return QtCustomTree::qt_metacast(_clname);
+}
+
+int FileListTree::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QtCustomTree::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 1)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 1;
+    }
+#ifndef QT_NO_PROPERTIES
+      else if (_c == QMetaObject::ReadProperty) {
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: *reinterpret_cast< QString*>(_v) = fsPath(); break;
+        case 1: *reinterpret_cast< QString*>(_v) = refresh(); break;
+        }
+        _id -= 2;
+    } else if (_c == QMetaObject::WriteProperty) {
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: setFsPath(*reinterpret_cast< QString*>(_v)); break;
+        case 1: setRefresh(*reinterpret_cast< QString*>(_v)); break;
+        }
+        _id -= 2;
+    } else if (_c == QMetaObject::ResetProperty) {
+        _id -= 2;
+    } else if (_c == QMetaObject::QueryPropertyDesignable) {
+        _id -= 2;
+    } else if (_c == QMetaObject::QueryPropertyScriptable) {
+        _id -= 2;
+    } else if (_c == QMetaObject::QueryPropertyStored) {
+        _id -= 2;
+    } else if (_c == QMetaObject::QueryPropertyEditable) {
+        _id -= 2;
+    } else if (_c == QMetaObject::QueryPropertyUser) {
+        _id -= 2;
+    }
+#endif // QT_NO_PROPERTIES
+    return _id;
+}
+static const uint qt_meta_data_QtItemDelegate[] = {
+
+ // content:
+       6,       // revision
+       0,       // classname
+       1,   14, // classinfo
+       0,    0, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // classinfo: key, value
+       0,   15,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_QtItemDelegate[] = {
+    "QtItemDelegate\0Yate\0"
+};
+
+void QtItemDelegate::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
+}
+
+const QMetaObjectExtraData QtItemDelegate::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
+const QMetaObject QtItemDelegate::staticMetaObject = {
+    { &QItemDelegate::staticMetaObject, qt_meta_stringdata_QtItemDelegate,
+      qt_meta_data_QtItemDelegate, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &QtItemDelegate::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *QtItemDelegate::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *QtItemDelegate::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_QtItemDelegate))
+        return static_cast<void*>(const_cast< QtItemDelegate*>(this));
+    if (!strcmp(_clname, "String"))
+        return static_cast< String*>(const_cast< QtItemDelegate*>(this));
+    return QItemDelegate::qt_metacast(_clname);
+}
+
+int QtItemDelegate::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QItemDelegate::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    return _id;
+}
+static const uint qt_meta_data_QtHtmlItemDelegate[] = {
+
+ // content:
+       6,       // revision
+       0,       // classname
+       1,   14, // classinfo
+       0,    0, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // classinfo: key, value
+       0,   19,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_QtHtmlItemDelegate[] = {
+    "QtHtmlItemDelegate\0Yate\0"
+};
+
+void QtHtmlItemDelegate::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
+}
+
+const QMetaObjectExtraData QtHtmlItemDelegate::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
+const QMetaObject QtHtmlItemDelegate::staticMetaObject = {
+    { &QtItemDelegate::staticMetaObject, qt_meta_stringdata_QtHtmlItemDelegate,
+      qt_meta_data_QtHtmlItemDelegate, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &QtHtmlItemDelegate::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *QtHtmlItemDelegate::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *QtHtmlItemDelegate::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_QtHtmlItemDelegate))
+        return static_cast<void*>(const_cast< QtHtmlItemDelegate*>(this));
+    return QtItemDelegate::qt_metacast(_clname);
+}
+
+int QtHtmlItemDelegate::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QtItemDelegate::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    return _id;
+}
+QT_END_MOC_NAMESPACE

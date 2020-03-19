@@ -1,0 +1,137 @@
+/****************************************************************************
+** Meta object code from reading C++ file 'customtext.h'
+**
+** Created by: The Qt Meta Object Compiler version 63 (Qt 4.8.6)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#include "customtext.h"
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#error "The header file 'customtext.h' doesn't include <QObject>."
+#elif Q_MOC_OUTPUT_REVISION != 63
+#error "This file was generated using the moc from 4.8.6. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+QT_BEGIN_MOC_NAMESPACE
+static const uint qt_meta_data_CustomTextEdit[] = {
+
+ // content:
+       6,       // revision
+       0,       // classname
+       1,   14, // classinfo
+       1,   16, // methods
+       4,   21, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // classinfo: key, value
+       0,   15,
+
+ // slots: signature, parameters, type, tag, flags
+      25,   21,   20,   20, 0x0a,
+
+ // properties: name, type, flags
+      49,   44, 0x01095003,
+      73,   65, 0x0a095003,
+      96,   92, 0x02095003,
+     116,   44, 0x01095003,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_CustomTextEdit[] = {
+    "CustomTextEdit\0Yate\0\0url\0urlTrigerred(QUrl)\0"
+    "bool\0_yate_followurl\0QString\0"
+    "_yate_tempitemname\0int\0_yate_tempitemcount\0"
+    "_yate_tempitemreplace\0"
+};
+
+void CustomTextEdit::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        CustomTextEdit *_t = static_cast<CustomTextEdit *>(_o);
+        switch (_id) {
+        case 0: _t->urlTrigerred((*reinterpret_cast< const QUrl(*)>(_a[1]))); break;
+        default: ;
+        }
+    }
+}
+
+const QMetaObjectExtraData CustomTextEdit::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
+const QMetaObject CustomTextEdit::staticMetaObject = {
+    { &QtCustomWidget::staticMetaObject, qt_meta_stringdata_CustomTextEdit,
+      qt_meta_data_CustomTextEdit, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &CustomTextEdit::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *CustomTextEdit::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *CustomTextEdit::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_CustomTextEdit))
+        return static_cast<void*>(const_cast< CustomTextEdit*>(this));
+    return QtCustomWidget::qt_metacast(_clname);
+}
+
+int CustomTextEdit::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QtCustomWidget::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 1)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 1;
+    }
+#ifndef QT_NO_PROPERTIES
+      else if (_c == QMetaObject::ReadProperty) {
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: *reinterpret_cast< bool*>(_v) = followUrl(); break;
+        case 1: *reinterpret_cast< QString*>(_v) = tempItemName(); break;
+        case 2: *reinterpret_cast< int*>(_v) = tempItemCount(); break;
+        case 3: *reinterpret_cast< bool*>(_v) = tempItemReplace(); break;
+        }
+        _id -= 4;
+    } else if (_c == QMetaObject::WriteProperty) {
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: setFollowUrl(*reinterpret_cast< bool*>(_v)); break;
+        case 1: setTempItemName(*reinterpret_cast< QString*>(_v)); break;
+        case 2: setTempItemCount(*reinterpret_cast< int*>(_v)); break;
+        case 3: setTempItemReplace(*reinterpret_cast< bool*>(_v)); break;
+        }
+        _id -= 4;
+    } else if (_c == QMetaObject::ResetProperty) {
+        _id -= 4;
+    } else if (_c == QMetaObject::QueryPropertyDesignable) {
+        _id -= 4;
+    } else if (_c == QMetaObject::QueryPropertyScriptable) {
+        _id -= 4;
+    } else if (_c == QMetaObject::QueryPropertyStored) {
+        _id -= 4;
+    } else if (_c == QMetaObject::QueryPropertyEditable) {
+        _id -= 4;
+    } else if (_c == QMetaObject::QueryPropertyUser) {
+        _id -= 4;
+    }
+#endif // QT_NO_PROPERTIES
+    return _id;
+}
+QT_END_MOC_NAMESPACE

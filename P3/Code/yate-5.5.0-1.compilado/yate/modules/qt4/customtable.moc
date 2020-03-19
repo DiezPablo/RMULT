@@ -1,0 +1,159 @@
+/****************************************************************************
+** Meta object code from reading C++ file 'customtable.h'
+**
+** Created by: The Qt Meta Object Compiler version 63 (Qt 4.8.6)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#include "customtable.h"
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#error "The header file 'customtable.h' doesn't include <QObject>."
+#elif Q_MOC_OUTPUT_REVISION != 63
+#error "This file was generated using the moc from 4.8.6. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+QT_BEGIN_MOC_NAMESPACE
+static const uint qt_meta_data_CustomTable[] = {
+
+ // content:
+       6,       // revision
+       0,       // classname
+       1,   14, // classinfo
+       5,   16, // methods
+       7,   41, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // classinfo: key, value
+       0,   12,
+
+ // slots: signature, parameters, type, tag, flags
+      18,   17,   17,   17, 0x09,
+      39,   36,   17,   17, 0x09,
+      61,   17,   17,   17, 0x09,
+      87,   79,   17,   17, 0x09,
+     112,   17,   17,   17, 0x09,
+
+ // properties: name, type, flags
+     142,  130, 0x0b095003,
+     164,  159, 0x01095003,
+     188,  159, 0x01095003,
+     211,  159, 0x01095003,
+     242,  238, 0x02095003,
+     266,  258, 0x0a095003,
+     283,  258, 0x0a095003,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_CustomTable[] = {
+    "CustomTable\0Yate\0\0itemChildAction()\0"
+    "on\0itemChildToggle(bool)\0itemChildSelect()\0"
+    "row,col\0itemCellChanged(int,int)\0"
+    "actionTriggered()\0QStringList\0"
+    "_yate_save_props\0bool\0_yate_notifyitemchanged\0"
+    "_yate_horizontalheader\0"
+    "_yate_notifyonenterpressed\0int\0"
+    "_yate_rowheight\0QString\0_yate_col_widths\0"
+    "_yate_sorting\0"
+};
+
+void CustomTable::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        CustomTable *_t = static_cast<CustomTable *>(_o);
+        switch (_id) {
+        case 0: _t->itemChildAction(); break;
+        case 1: _t->itemChildToggle((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 2: _t->itemChildSelect(); break;
+        case 3: _t->itemCellChanged((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 4: _t->actionTriggered(); break;
+        default: ;
+        }
+    }
+}
+
+const QMetaObjectExtraData CustomTable::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
+const QMetaObject CustomTable::staticMetaObject = {
+    { &QtTable::staticMetaObject, qt_meta_stringdata_CustomTable,
+      qt_meta_data_CustomTable, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &CustomTable::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *CustomTable::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *CustomTable::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_CustomTable))
+        return static_cast<void*>(const_cast< CustomTable*>(this));
+    return QtTable::qt_metacast(_clname);
+}
+
+int CustomTable::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QtTable::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 5)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 5;
+    }
+#ifndef QT_NO_PROPERTIES
+      else if (_c == QMetaObject::ReadProperty) {
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: *reinterpret_cast< QStringList*>(_v) = saveProps(); break;
+        case 1: *reinterpret_cast< bool*>(_v) = getNotifyItemChanged(); break;
+        case 2: *reinterpret_cast< bool*>(_v) = getHHeader(); break;
+        case 3: *reinterpret_cast< bool*>(_v) = enterPressNotify(); break;
+        case 4: *reinterpret_cast< int*>(_v) = getRowHeight(); break;
+        case 5: *reinterpret_cast< QString*>(_v) = getColWidths(); break;
+        case 6: *reinterpret_cast< QString*>(_v) = getSorting(); break;
+        }
+        _id -= 7;
+    } else if (_c == QMetaObject::WriteProperty) {
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: setSaveProps(*reinterpret_cast< QStringList*>(_v)); break;
+        case 1: setNotifyItemChanged(*reinterpret_cast< bool*>(_v)); break;
+        case 2: setHHeader(*reinterpret_cast< bool*>(_v)); break;
+        case 3: setEnterPressNotify(*reinterpret_cast< bool*>(_v)); break;
+        case 4: setRowHeight(*reinterpret_cast< int*>(_v)); break;
+        case 5: setColWidths(*reinterpret_cast< QString*>(_v)); break;
+        case 6: setSorting(*reinterpret_cast< QString*>(_v)); break;
+        }
+        _id -= 7;
+    } else if (_c == QMetaObject::ResetProperty) {
+        _id -= 7;
+    } else if (_c == QMetaObject::QueryPropertyDesignable) {
+        _id -= 7;
+    } else if (_c == QMetaObject::QueryPropertyScriptable) {
+        _id -= 7;
+    } else if (_c == QMetaObject::QueryPropertyStored) {
+        _id -= 7;
+    } else if (_c == QMetaObject::QueryPropertyEditable) {
+        _id -= 7;
+    } else if (_c == QMetaObject::QueryPropertyUser) {
+        _id -= 7;
+    }
+#endif // QT_NO_PROPERTIES
+    return _id;
+}
+QT_END_MOC_NAMESPACE
