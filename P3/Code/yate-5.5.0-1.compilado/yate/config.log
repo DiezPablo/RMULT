@@ -603,7 +603,7 @@ configure:5082: $? = 0
 configure:5091: result: yes
 configure:5148: checking for dlopen in default libs
 configure:5168: gcc -o conftest -g -O2   conftest.c  >&5
-/tmp/ccD17Mac.o: In function `main':
+/tmp/ccp9BvK4.o: In function `main':
 /home/aalcala/Escritorio/yate-5.5.0-1.compilado/yate/conftest.c:41: undefined reference to `dlopen'
 collect2: error: ld returned 1 exit status
 configure:5168: $? = 1
@@ -763,7 +763,7 @@ configure:5838: checking for resolver library
 configure:5863: gcc -o conftest -g -O2 -Wall -Werror -Wl,--unresolved-symbols=ignore-in-shared-libs   conftest.c  >&5
 configure:5863: $? = 0
 configure:5904: gcc -o conftest -g -O2 -Wall -Werror -Wl,--unresolved-symbols=ignore-in-shared-libs   conftest.c  >&5
-/tmp/ccO7omv1.o: In function `main':
+/tmp/ccpr0JxW.o: In function `main':
 /home/aalcala/Escritorio/yate-5.5.0-1.compilado/yate/conftest.c:44: undefined reference to `__res_query'
 collect2: error: ld returned 1 exit status
 configure:5904: $? = 1
