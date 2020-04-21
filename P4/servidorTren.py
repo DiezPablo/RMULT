@@ -9,6 +9,7 @@ import socket
 import struct
 import time
 import math
+import matplotlib.pyplot as plt 
 
 MAX_ETHERNET_DATA=1500
 MIN_ETHERNET_DATA=46
@@ -54,6 +55,7 @@ if __name__ == "__main__":
 	tamanoPackets = 0
 	anchosBandas = []
 	retardos = []
+	tiemposLlegada = []
 	for packet in packet_list:
 		#Para cada paquete recibido extraemos de la cabecera
 		#cada uno de los campos necesarios para hacer los cálculos
@@ -88,6 +90,8 @@ if __name__ == "__main__":
 				anchoBandaInstantaneo = tamanoPackets
 			else:
 				anchoBandaInstantaneo = tamanoPackets / (reception_time - reception_time_i1)
+			tiempoLlegada = reception_time - reception_time_i1
+			tiemposLlegada.append(tiempoLlegada)
 			anchosBandas.append(anchoBandaInstantaneo)
 			print ('Ancho de Banda Instantáneo (b/s): ', anchoBandaInstantaneo)
 		###########################PRÁCTICA##############################################
